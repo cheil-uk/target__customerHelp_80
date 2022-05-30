@@ -7,7 +7,7 @@
 // ==========================================================================
 // Scripts, helper widgets - import below
 // ==========================================================================
-
+import Elements from "./components/elements";
 var cheillondon = cheillondon || {};
 
 cheillondon.targetBoilerplate = (function () {
@@ -39,7 +39,8 @@ cheillondon.targetBoilerplate = (function () {
 				if (window.$) {
 					console.log('doEverythingTimeout - jQuery loaded');
 					main.appendNewStyle();
-					main.removeStuff();
+					const elements = new Elements();
+					elements.addingElements();
 					main.addElements();
 
 				} else {
@@ -93,9 +94,20 @@ cheillondon.targetBoilerplate = (function () {
 		// ==========================================================================
 		addElements: function () {
 
-			console.log('XXX - addElements');
-
-
+				let accItem = document.getElementsByClassName('accordionItem');
+    let accHD = document.getElementsByClassName('accordionItemHeading');
+    for (let i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+    }
+    function toggleItem() {
+        let itemClass = this.parentNode.className;
+        for (let i = 0; i < accItem.length; i++) {
+            accItem[i].className = 'accordionItem close';
+        }
+        if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+        }
+    }
 
 		},
 
