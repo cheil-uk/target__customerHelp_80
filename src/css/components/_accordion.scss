@@ -1,90 +1,94 @@
+.pd-g-product-accordion-faq {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 0px;
+    /* Style the buttons that are used to open and close the accordion panel */
+      .accordion {
+        color: #000;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 22px;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+        outline: none;
+        transition: 0.4s;
+      }
 
-.accordionWrapper {
- margin: 10%;
- max-width: 1440px;
- display: inline-block
+      .accordion:after {
+        position: relative;
+        top: -5px;
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-right: 0.2px solid black;
+        border-top: 0.2px solid black;
+        transform: rotate(135deg);
+        margin-right: 0.5em;
+        margin-left: 1.0em;
+        float: right;
+      }
+
+      .active:after {
+        position: relative;
+        top: -5px;
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-right: 0.2px solid black;
+        border-top: 0.2px solid black;
+        transform: rotate(-45deg);
+        margin-right: 0.5em;
+        margin-left: 1.0em;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active,
+      .accordion:hover {
+        background-color: #fff;
+      }
+
+      /* Style the accordion panel. Note: hidden by default */
+      .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+      }
+
+      .accordionItemContent {
+        p {
+          padding: 5px 0px;
+        }
+
+        ol {
+          li {
+            padding-bottom: 15px;
+            margin-left: 15px;
+            list-style: decimal !important;
+          }
+        }
+
+        ul {
+          li {
+            list-style: disc !important;
+            padding-bottom: 15px;
+            margin-left: 15px;
+          }
+        }
+
+        .youtube_video_link {
+          border: 1px solid black;
+          padding: 10px 20px;
+          border-radius: 20px;
+          margin: 15px 0px;
+          display: inline-block;
+          color: black;
+          font-weight: bold;
+          font-size: 12px;
+        }
+      }
 }
 
-.accordionItem {
- float: left;
- display: block;
- width: 100%;
- box-sizing: border-box;
- font-family: 'Open-sans', Arial, sans-serif;
-}
-
-.accordionItemHeading {
- cursor: pointer;
- margin: 0px 0px 10px 0px;
- padding: 10px;
- border-bottom: 2px solid #bdc3c7;
- color: #000;
- width: 100%;
- font-weight: 400;
-}
-
-.accordionItemContent {
- p {
-  padding-bottom: 5px
- }
- ul {
-  margin-left: 20px;
-  li {
-   list-style: disc !important;
-   padding: 10px 0px 0px 0px;
-  }
-    li::marker {
-     padding-right: 3px;
-    }
- }
- ol {
-  margin-left: 20px;
-  li {
-   list-style: decimal !important;
-   padding: 10px 0px 0px 0px;
-  }
-  li::marker {
-   padding-right: 3px;
-  }
- }
-}
-
-.close .accordionItemContent {
- height: 0px;
- transition: height 1s ease-out;
- -webkit-transform: scaleY(0);
- -o-transform: scaleY(0);
- -ms-transform: scaleY(0);
- transform: scaleY(0);
- float: left;
- display: block;
-
-
-}
-
-.open .accordionItemContent {
- padding: 20px;
- background-color: #fff;
- width: 100%;
- margin: 0px 0px 10px 0px;
- display: block;
- // -webkit-transform: scaleY(1);
- // -o-transform: scaleY(1);
- // -ms-transform: scaleY(1);
- // transform: scaleY(1);
- // -webkit-transform-origin: top;
- // -o-transform-origin: top;
- // -ms-transform-origin: top;
- // transform-origin: top;
-
- // -webkit-transition: -webkit-transform 0.4s ease-out;
- // -o-transition: -o-transform 0.4s ease;
- // -ms-transition: -ms-transform 0.4s ease;
- // transition: transform 0.4s ease;
- // box-sizing: border-box;
-}
-
-.open .accordionItemHeading {
- margin: 0px;
- color: #000;
-}
