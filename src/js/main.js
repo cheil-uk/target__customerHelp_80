@@ -8,6 +8,8 @@
 // Scripts, helper widgets - import below
 // ==========================================================================
 import Elements from "./components/elements";
+import PopUpContent from "./components/popUpContent";
+import Configurator from "./components/configurator";
 var cheillondon = cheillondon || {};
 
 cheillondon.targetBoilerplate = (function () {
@@ -39,9 +41,47 @@ cheillondon.targetBoilerplate = (function () {
 				if (window.$) {
 					console.log('doEverythingTimeout - jQuery loaded');
 					main.appendNewStyle();
+					const path = window.location.pathname;
 					const elements = new Elements();
-					elements.addingElements();
-					main.addElements();
+					const configurator = new	Configurator();
+
+					const daSkus = [
+									"WW90T554DAN",
+									"WW90T554DAW",
+									"WW90TA046AE",
+									"WW90T534DAN",
+									"WW90TA046AX",
+									"WW80TA046AE",
+									"DV90T5240AN",
+									"WW80TA046AX",
+									"WW90T684DLH",
+									"DV90TA040AE",
+
+									"RS68A8820S9",
+									"RB31FDRNDSA",
+									"RB29FSRNDSA",
+									"RS67A8810B1",
+									"RB34T602EWW",
+									"RS67A8810S9",
+									"RB34T602ESA",
+									"RS6HA8880S9",
+									"RL38A776ASR",
+									"BRB26600FWW" ]
+
+									daSkus.forEach((sku) => {
+
+										if( path.includes( sku.toLowerCase() )) {
+
+												elements.addingElements();
+												main.addElements();
+												main.setEvents('deliveryPopup');
+												configurator.usp();
+										}
+
+									});
+
+
+
 
 				} else {
 					console.log('no jquery')
@@ -121,11 +161,14 @@ cheillondon.targetBoilerplate = (function () {
 		// ==========================================================================
 		setEvents: function (elm = '') {
 
-			console.log('XXX - setEvents: ' + elm);
-
 			switch (elm) {
-				case 'modal':
+				case 'deliveryPopup':
 					//code to open modal;
+					$('.youtube_video_link').on('click', function(e){
+						e.preventDefault();
+						const popUpContent = new PopUpContent();
+						popUpContent.addContent('https://www.youtube.com/embed/C6Bkz9pgAIM', 'https://www.youtube.com/embed/er7XE68fVEI', e.target);
+					});
 					break;
 				case 'financePopup':
 				//code to open something else;

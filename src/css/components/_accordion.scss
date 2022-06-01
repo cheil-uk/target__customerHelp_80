@@ -1,94 +1,130 @@
 .pd-g-product-accordion-faq {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 10px 0px;
-    /* Style the buttons that are used to open and close the accordion panel */
-      .accordion {
-        color: #000;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 22px;
-        padding: 18px;
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid #eee;
-        outline: none;
-        transition: 0.4s;
-      }
+ padding: 2vw;
+ .accordion__container {
+  h1 {
+   font-size: 22px;
+   padding-bottom: 20px;
+  }
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 10px 0px;
 
-      .accordion:after {
-        position: relative;
-        top: -5px;
-        content: "";
-        width: 15px;
-        height: 15px;
-        border-right: 0.2px solid black;
-        border-top: 0.2px solid black;
-        transform: rotate(135deg);
-        margin-right: 0.5em;
-        margin-left: 1.0em;
-        float: right;
-      }
+   /* Style the buttons that are used to open and close the accordion panel */
+   .accordion {
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 30px 18px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    outline: none;
+    transition: 0.4s;
+   }
 
-      .active:after {
-        position: relative;
-        top: -5px;
-        content: "";
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        border-right: 0.2px solid black;
-        border-top: 0.2px solid black;
-        transform: rotate(-45deg);
-        margin-right: 0.5em;
-        margin-left: 1.0em;
-      }
+   .accordion:after {
+    position: relative;
+    top: -5px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-right: 0.2px solid black;
+    border-top: 0.2px solid black;
+    transform: rotate(135deg);
+    margin-right: 0.5em;
+    margin-left: 1.0em;
+    float: right;
+   }
 
-      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-      .active,
-      .accordion:hover {
-        background-color: #fff;
-      }
+   .active:after {
+    position: relative;
+    top: -5px;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-right: 0.2px solid black;
+    border-top: 0.2px solid black;
+    transform: rotate(-45deg);
+    margin-right: 0.5em;
+    margin-left: 1.0em;
+   }
 
-      /* Style the accordion panel. Note: hidden by default */
-      .panel {
-        padding: 0 18px;
-        background-color: white;
-        display: none;
-        overflow: hidden;
-      }
+   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+   .active,
+   .accordion {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+   }
 
-      .accordionItemContent {
-        p {
-          padding: 5px 0px;
-        }
+   /* Style the accordion panel. Note: hidden by default */
+   .panel {
+    padding: 20px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+   }
 
-        ol {
-          li {
-            padding-bottom: 15px;
-            margin-left: 15px;
-            list-style: decimal !important;
-          }
-        }
+   .accordionItemContent {
+    p {
+     padding: 5px 0px;
+    }
 
-        ul {
-          li {
-            list-style: disc !important;
-            padding-bottom: 15px;
-            margin-left: 15px;
-          }
-        }
+    ol {
+     li {
+      padding-bottom: 15px;
+      margin-left: 15px;
+      list-style: decimal !important;
+     }
+    }
 
-        .youtube_video_link {
-          border: 1px solid black;
-          padding: 10px 20px;
-          border-radius: 20px;
-          margin: 15px 0px;
-          display: inline-block;
-          color: black;
-          font-weight: bold;
-          font-size: 12px;
-        }
-      }
+    ul {
+     li {
+      list-style: disc !important;
+      padding-bottom: 15px;
+      margin-left: 15px;
+     }
+    }
+
+    .youtube_video_link {
+     border: 1px solid black;
+     padding: 10px 20px;
+     border-radius: 20px;
+     margin: 15px 0px;
+     display: inline-block;
+     color: black;
+     font-weight: bold;
+     font-size: 12px;
+    }
+    .cancel_order {
+     padding-top: 15px;
+     ol {
+      margin-left: 10px;
+     }
+    }
+    .product_returns {
+     padding-top: 15px;
+
+     ol {
+      margin-left: 10px;
+     }
+    }
+    .price_promise__work {
+     padding-top: 15px;
+
+     ol {
+      margin-left: 10px;
+     }
+    }
+    .track__progress {
+     padding-top: 15px;
+
+     ol {
+      margin-left: 10px;
+     }
+    }
+   }
+ }
 }
 
