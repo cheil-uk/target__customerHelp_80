@@ -1,4 +1,5 @@
 .pd-g-product-accordion-faq {
+font-size: 13px;
  padding: 2vw;
  .accordion__container {
   h1 {
@@ -35,6 +36,9 @@
     margin-right: 0.5em;
     margin-left: 1.0em;
     float: right;
+    @media only screen and (max-width: 425px) {
+      display: none;
+    }
    }
 
    .active:after {
@@ -49,6 +53,9 @@
     transform: rotate(-45deg);
     margin-right: 0.5em;
     margin-left: 1.0em;
+    @media only screen and (max-width: 425px) {
+        display: none;
+      }
    }
 
    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */

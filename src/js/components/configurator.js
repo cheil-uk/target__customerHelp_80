@@ -4,18 +4,18 @@ export default class Configurator {
         const orderOptions = document.createElement('div');
         const markup = `
             <ul class="orderOptions">
-            <li class="option" data-omni-type="microsite" ga-ca="microsite"ga-ac="tvPdp-test" ga-la="dausp:price promise" data-omni="dausp:price promise">
+                <li class="option" data-omni-type="microsite" ga-ca="microsite"ga-ac="tvPdp-test" ga-la="dausp:pricepromise" data-omni="dausp:pricepromise">
                     <div class="option-icon">
-                        <img src="https://images.samsung.com/is/image/samsung/assets/uk/smartphonepcd/pricepromise.png"/>
+                        <img src="https://images.samsung.com/is/image/samsung/assets/uk/smartphonepcd/Price_faq.png"/>
                     </div>
                     <div class="option-content">
-                        <p class="label">Price Promise</p>
-                        <p class="text">Find it cheper and we'll return the difference**</p>
+                      <p class="label">Price Promise</p>
+                      <p class="text">Find it cheaper and we'll return the difference**</p>
                     </div>
                 </li>
                 <li class="option" data-omni-type="microsite" ga-ca="microsite"ga-ac="tvPdp-test" ga-la="dausp:finance" data-omni="dausp:finance">
                     <div class="option-icon">
-                        <img src="https://images.samsung.com/is/image/samsung/assets/uk/smartphonepcd/icon_pay.png"/>
+                        <img src="https://images.samsung.com/is/image/samsung/assets/uk/smartphonepcd/Finance_faq.png"/>
                     </div>
                     <div class="option-content">
                       <p class="label">Flexible Finance</p>
@@ -24,7 +24,7 @@ export default class Configurator {
                 </li>
                 <li class="option" data-omni-type="microsite" ga-ca="microsite"ga-ac="tvPdp-test" ga-la="dausp:delivery" data-omni="dausp:delivery">
                     <div class="option-icon">
-                        <img src="https://images.samsung.com/is/image/samsung/p5/uk/tablets/delivery.png"/>
+                        <img src="https://images.samsung.com/is/image/samsung/assets/uk/smartphonepcd/Delivery_faq.png"/>
                     </div>
                     <div class="option-content">
                         <p class="label">Free Scheduled Delivery</p>
@@ -43,12 +43,9 @@ export default class Configurator {
         orderOptions.append(onlineShopContainer)
 
         document.querySelector(".online-shop-container > p").addEventListener('click', () => {
-         document.querySelector(".pd-g-product-accordion-faq").scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        });
+        document.querySelector(".product-support__banner").scrollIntoView({
+            block: 'start',
+            });
         })
-
-
     }
 }
